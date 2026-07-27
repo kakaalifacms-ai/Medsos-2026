@@ -27,3 +27,27 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
 const medsosCollection = collection(db, "medsos")
+
+//(digunakan di halaman admin)
+async function postingStatus(){
+    
+    let teks = document.getElemenById("isiStatus").value
+    
+    if (teks === "") return
+    
+    try {
+        await addDoc(medsosCollection), {
+            konten: teks, 
+            Likes: 0,
+            Waktu: serverTimestamp()
+        }
+        
+        document.getElementById("isiStatus").value =""
+        
+        alert("Status berhasil ditambahkan! ")
+    } catch (error) {
+      alert("Gagal menambah status, silakan cobab lagi")
+    }
+}
+
+window.postingStatus = postingStatus

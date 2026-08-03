@@ -8,9 +8,9 @@ import {
     orderBy,
     onSnapshot,
     serverTimestamp, 
-    dic, 
+    doc, 
     updateDoc, 
-    incrememt
+    increment
 } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js"
 
 
@@ -31,7 +31,7 @@ const medsosCollection = collection(db, "medsos")
 //(digunakan di halaman admin)
 async function postingStatus(){
     
-    let teks = document.getElemenById("isiStatus").value
+    let teks = document.getElementById("isiStatus").value
     
     if (teks === "") return
     
@@ -49,5 +49,14 @@ async function postingStatus(){
       alert("Gagal menambah status, silakan cobab lagi")
     }
 }
-
+    //4. 
+    async function muatTimeline() {
+        //periska
+        if(!document.getElementById("timeline")) return
+        
+        //query
+        const q = query(medsosCollection, orderBy("waktu","desc")) 
+    
+}
+// daftar fungsi
 window.postingStatus = postingStatus

@@ -36,11 +36,11 @@ async function postingStatus(){
     if (teks === "") return
     
     try {
-        await addDoc(medsosCollection), {
+        await addDoc(medsosCollection, {
             konten: teks, 
             Likes: 0,
             Waktu: serverTimestamp()
-        }
+        }) ;
         
         document.getElementById("isiStatus").value =""
         
@@ -55,8 +55,37 @@ async function postingStatus(){
         if(!document.getElementById("timeline")) return
         
         //query
-        const q = query(medsosCollection, orderBy("waktu","desc")) 
+        const q = query(medsosCollection, orderBy("Waktu","desc")) 
     
+    //onSnapshot
+    onSnapshot(q, (snapshot)=> {
+        //buat varibel
+        let output = ""
+        
+        //loop
+        snapshot.forEach((doc) => {
+            //ambil data
+            const data = doc.data()
+            
+            //ambil id dokumen
+            const id = doc.id
+            
+            //buat html
+            output +=`
+            <div class="post-card">
+             <div class="container">
+             ${data.konten}
+             </div>
+            </div>
+            `
+        }) ;
+        //tampilan HTML output di elemen dengan id"timeline"
+        document.getElementById("timeline").innerHTML = output
+    }) ;
 }
 // daftar fungsi
 window.postingStatus = postingStatus
+
+//pangggilan multiple
+muatTimeline()
+

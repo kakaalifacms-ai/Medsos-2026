@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fafafa;
+    background-color: #F4F4F4;
     color: #262626;
     padding: 0;
 
@@ -19,8 +19,8 @@ body {
    HEADER
 ========================= */
 .header {
-    background: #0095f6;
-    color: white;
+    background: #58BB32;
+    color: black;
     padding: 18px 10px;
     text-align: center;
     font-size: 25px;
@@ -38,7 +38,7 @@ body {
    MENU
 ========================= */
 .menu {
-    background: white;
+    background: #E3FF0075;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,7 +50,7 @@ body {
 
 .menu a {
     text-decoration: none;
-    color: #168bd0;
+    color: #FF251D;
     font-weight: bold;
     font-size: 15px;
     padding: 8px 12px;
@@ -123,8 +123,8 @@ textarea:focus {
    BUTTON UMUM
 ========================= */
 button {
-    background-color: #0095f6;
-    color: white;
+    background-color: #00F61C;
+    color: black;
     border: none;
     padding: 12px;
     border-radius: 8px;
@@ -136,7 +136,7 @@ button {
 }
 
 button:hover {
-    background-color: #0077c6;
+    background-color: #0E8507;
 }
 
 /* =========================

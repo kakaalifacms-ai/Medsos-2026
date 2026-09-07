@@ -415,7 +415,7 @@ function muatDaftarAdmin() {
                                 class="btn-delete"
                                 onclick="hapusStatus('${id}')"
                             >
-                                🗑️ Hapus Post
+                                ️🚮 Hapus aja
                             </button>
 
                         </div>

@@ -1,21 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Medsos Mini</title>
   
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="container">
-    <h2>⏱️Timeline Status</h2>
-    <div id="timeline"> </div>
-  </div>
   
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    🚀 Medsos Mini
+    <span>Timeline Status</span>
+  </header>
+  
+  <!-- ===== MENU ===== -->
+  <nav class="menu">
+    <a href="index.html">🏠 Beranda</a>
+    <a href="admin.html">📝 Buat Postingan</a>
+  </nav>
+  
+  <!-- ===== ISI HALAMAN ===== -->
+  <main class="container">
+    
+    <h2>🚀 Timeline Status</h2>
+    
+    <div id="timeline"></div>
+    
+  </main>
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+  
+  
+  <!-- JavaScript -->
   <script src="main.js" type="module"></script>
+  
 </body>
-</html>
+

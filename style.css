@@ -25,6 +25,11 @@ body {
     text-align: center;
     font-size: 25px;
     font-weight: bold;
+    position: relative;
+min-height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .header span {
@@ -33,6 +38,34 @@ body {
     font-weight: normal;
     margin-top: 4px;
 }
+/* =========================
+   FOTO HEADER
+========================= */
+
+
+.judul-header {
+    text-align: center;
+}
+
+.foto-kiri {
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.foto-kanan {
+    position: absolute;
+    right: 12px;
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
 
 /* =========================
    MENU
